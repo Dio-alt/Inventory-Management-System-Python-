@@ -8,15 +8,15 @@ class Inventory:
             "quantity": quantity
         }
         self.products.append(product)
-        print(f"✅ Produto '{product['name']}' adicionado com sucesso.")
+        print(f" Produto '{product['name']}' adicionado com sucesso.")
 
     def list_products(self):
         if not self.products:
-            print("⚠️ Nenhum produto cadastrado.")
+            print(" Nenhum produto cadastrado.")
             return
 
         print("
-📦 Lista de produtos:")
+ Lista de produtos:")
         for index, product in enumerate(self.products):
             print(f"{index} - {product['name']} (Qtd: {product['quantity']})")
 
@@ -24,13 +24,13 @@ class Inventory:
         try:
             product = self.products[index]
             product["quantity"] = quantity
-            print(f"🔄 Estoque de '{product['name']}' atualizado.")
+            print(f" Estoque de '{product['name']}' atualizado.")
         except IndexError:
-            print("❌ Produto não encontrado.")
+            print(" Produto não encontrado.")
 
     def remove_product(self, index):
         try:
             removed = self.products.pop(index)
-            print(f"🗑️ Produto '{removed['name']}' removido.")
+            print(f" Produto '{removed['name']}' removido.")
         except IndexError:
-            print("❌ Produto não encontrado.")
+            print(" Produto não encontrado.")
