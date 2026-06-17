@@ -27,7 +27,7 @@ def main():
                 quantity = int(input("Quantidade: "))
                 inventory.add_product(name, quantity)
             except ValueError:
-                print("❌ Quantidade inválida.")
+                print(" Quantidade inválida.")
 
         elif option == "2":
             inventory.list_products()
@@ -39,7 +39,7 @@ def main():
                 quantity = int(input("Nova quantidade: "))
                 inventory.update_product(index, quantity)
             except ValueError:
-                print("❌ Entrada inválida.")
+                print(" Entrada inválida.")
 
         elif option == "4":
             inventory.list_products()
@@ -47,14 +47,14 @@ def main():
                 index = int(input("Índice do produto para remover: "))
                 inventory.remove_product(index)
             except ValueError:
-                print("❌ Entrada inválida.")
+                print(" Entrada inválida.")
 
         elif option == "0":
-            print("👋 Encerrando sistema...")
+            print(" Encerrando sistema...")
             break
 
         else:
-            print("❌ Opção inválida.")
+            print(" Opção inválida.")
 
 
 if __name__ == "__main__":
